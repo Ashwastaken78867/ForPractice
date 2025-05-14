@@ -7,69 +7,62 @@ import linkedin from "../src/assets/linkedin.png";
 
 function Footer() {
   return (
-    <div className="container py-5 mt-5 border-top">
-      <div className="row">
+    <div className="container-fluid py-5 border-top" style={{ minHeight: "100vh", backgroundColor: "#f9f9f9" }}>
+      <div className="container h-100 d-flex flex-column justify-content-between">
 
-        {/* Left 3/4 - Heading and Button */}
-        <div className="col-md-9">
-          <h3 className="fw-bold mb-4">
-            Ready to give your{" "}
-            <span style={{ color: "red" }}>institution an </span>
-            <span style={{ color: "red" }}>upgrade?</span>
-          </h3>
-          <button className="btn btn-success px-4 py-2 rounded-pill mb-4">
-            About Us
-          </button>
+        {/* Top CTA Section */}
+        <div className="row pt-5">
+          <div className="col-md-6">
+            <h3 className="fw-bold mb-3">
+              Ready to give your <br />
+              <span style={{ color: 'red' }}>institution an upgrade?</span>
+            </h3>
+            <button className="btn btn-success px-4 py-2 rounded-pill mt-3">Contact Us</button>
+
+            {/* Spacer: 1/3rd page height */}
+            <div style={{ height: '33vh' }}></div>
+          </div>
         </div>
 
-        {/* Right 1/4 - Logo and Footer */}
-       
-
-      </div>
-       <div className="col-md-3 d-flex flex-column align-items-center">
+        {/* Footer Content */}
+        <div className="row align-items-start pb-4">
           {/* Logo */}
-          <img
-            src={logo}
-            alt="Website Logo"
-            style={{ maxHeight: "40px", objectFit: "contain" }}
-            className="mb-4"
-          />
+          <div className="col-md-3 mb-4">
+            <img src={logo} alt="Logo" style={{ height: "40px" }} />
+          </div>
 
-          {/* Footer Columns */}
-          <div className="row w-100">
-            {/* Column 1 */}
-            <div className="col-6 mb-3">
-              <p>About</p>
-              <p>Services</p>
-              <p>Careers</p>
-            </div>
+          {/* Resources */}
+          <div className="col-md-3 mb-4">
+            <p>Resources</p>
+            <p>Solutions</p>
+            <p>About Us</p>
+          </div>
 
-            {/* Column 2 */}
-            <div className="col-6 mb-3">
-              <p>Blog</p>
-              <p>Events</p>
-              <p>Support</p>
-            </div>
+          {/* Contact */}
+          <div className="col-md-3 mb-4">
+            <p>Contact Us</p>
+            <p>support@campus.technology</p>
+            <p>+91-9980-747-722</p>
+          </div>
 
-            {/* Column 3 */}
-            <div className="col-6 mb-3">
-              <p>Privacy</p>
-              <p>Terms</p>
-              <p>FAQ</p>
-            </div>
-
-            {/* Column 4 - Social Icons */}
-            <div className="col-6 mb-3">
-              <p>Chat with us</p>
-              <div className="d-flex gap-2 mt-2">
-                <img src={facebook} alt="Facebook" style={{ height: 24 }} />
-                <img src={instagram} alt="Instagram" style={{ height: 24 }} />
-                <img src={twitter} alt="Twitter" style={{ height: 24 }} />
-                <img src={linkedin} alt="LinkedIn" style={{ height: 24 }} />
-              </div>
+          {/* Social Icons */}
+          <div className="col-md-3 mb-4">
+            <p>Chat with us</p>
+            <div className="d-flex gap-3 mt-2">
+              <img src={facebook} alt="Facebook" style={{ height: 24 }} />
+              <img src={instagram} alt="Instagram" style={{ height: 24 }} />
+              <img src={twitter} alt="Twitter" style={{ height: 24 }} />
+              <img src={linkedin} alt="LinkedIn" style={{ height: 24 }} />
             </div>
           </div>
         </div>
+
+        {/* Footer Bottom Text */}
+        <div className="text-center text-muted pt-3 border-top">
+          <small>© 2022, Kahan Technologies Pvt. Ltd.</small>
+        </div>
+
+      </div>
     </div>
   );
 }

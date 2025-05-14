@@ -1,33 +1,33 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import illustration from '../assets/illustration.png';
+import illustration from '../assets/pic3.png';
 
-const HeroSection = () => {
+const File3 = () => {
   const navigate = useNavigate();
 
   return (
+    
     <div
-      className="container-fluid d-flex align-items-center position-relative"
+      className="container-fluid d-flex align-items-center"
       style={{ minHeight: "100vh", backgroundColor: "#fff" }}
     >
+         
+
       <div className="container">
         <div className="row align-items-center">
           {/* Text Section */}
           <div className="col-md-6 mb-4 mb-md-0">
             <h2 className="fw-bold mb-3">
-              A <span style={{ color: "red" }}>power-packed solution</span>
-              <span style={{ color: "black" }}>
-                {" "}
-                to streamline all educational and institutional processes.
-              </span>
+              <span style={{ color: "red" }}>Live reports </span><span >and</span> <span  style={{ color: "red" }}>comparative</span><br />
+
+              <span style={{ color: "red" }}>analysis</span><span> of tasks</span>
             </h2>
             <p className="text-muted mb-4">
-              Campus Tech is a robust solution packed with best-in-class
-              software, consulting, audits, and empowerment activities rolled
-              into one for your institution.
+              Campus Tech presents you with multiple dashboards to review the status of various 
+              accreditation tasks, including the tasks that are overdue, non-compliant, or need attention.
             </p>
             <button className="btn btn-success px-4 py-2 rounded-pill">
-              Get Demo
+              Accreditation & Compliance
             </button>
           </div>
 
@@ -37,20 +37,20 @@ const HeroSection = () => {
               src={illustration}
               alt="Campus Tech Illustration"
               className="img-fluid"
-              style={{ maxHeight: "200px" }}
+              style={{ maxHeight: "400px" }}
             />
 
-            {/* Arrow Navigation */}
+            {/* Arrow buttons below the image */}
             <div className="d-flex justify-content-center gap-4 mt-3">
               <button
                 className="btn btn-light rounded-circle shadow-sm"
-                disabled
+                onClick={() => navigate('/file2')} // Navigate to File2
               >
                 <i className="bi bi-chevron-left"></i>
               </button>
               <button
                 className="btn btn-light rounded-circle shadow-sm"
-                onClick={() => navigate('/file1')}
+                onClick={() => navigate('/')} // Navigate to File1 (not HeroSection)
               >
                 <i className="bi bi-chevron-right"></i>
               </button>
@@ -58,20 +58,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
-      {/* Orange Rectangle at the Bottom Left */}
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          width: '50%',
-          height: '5px',
-          backgroundColor: '#EDAA20',
-        }}
-      />
     </div>
   );
 };
 
-export default HeroSection;
+export default File3;
